@@ -1,4 +1,4 @@
-O objetivo deste projeto era inicialmente atender a [necessidade N.47 do PDTI 2013 do IFSC](http://dtic.ifsc.edu.br/files/pdti2013-revisao02.pdf).
+O objetivo deste projeto era inicialmente atender a [necessidade N.47 do PDTI 2013 do IFNMG](http://dtic.ifsc.edu.br/files/pdti2013-revisao02.pdf).
 
 No entanto, logo percebeu-se que outras instituições, especialmente as de ensino, poderiam se beneficiar das melhorias realizadas no projeto original, a fim de atender ao público brasileiro.
 

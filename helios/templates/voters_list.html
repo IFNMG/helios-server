@@ -11,9 +11,6 @@
 	<br /><br />
 </div>
 	{% if admin_p and not election.frozen_at %}
-	{% if election.private_p %}
-	<em>{% blocktrans %}Your election is marked private, which means you cannot open registration up more widely{% endblocktrans %}</em>.<br />
-	{% else %}
 	<br />
 	<br />
 
@@ -60,7 +57,6 @@
 	    </form>
     </div>
 	</div>
-	{% endif %}
 	{% endif %}
 	{% if email_voters and election.frozen_at and admin_p %}
 	<p><a class="btn btn-primary" href="{% url "helios.views.voters_email" election.uuid %}">{% trans "email voters" %}</a></p>
