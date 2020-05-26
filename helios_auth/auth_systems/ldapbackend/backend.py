@@ -6,7 +6,7 @@ Requires:
 - libldap2-dev
 - django-auth-ldap 1.2.6
 Technical support from IFNMG - Instituto Federal de Santa Catarina
-http://dtic.ifsc.edu.br/sistemas/sistema-de-votacao-on-line-helios/
+http://dtic.ifnmg.edu.br/sistemas/sistema-de-votacao-on-line-helios/
 """
 
 from django.conf import settings

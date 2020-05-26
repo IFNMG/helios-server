@@ -336,6 +336,8 @@ def one_election_view(request, election):
     votes = CastVote.get_by_voter(voter)
   else:
     votes = None
+    
+  if user and not voter and election.openreg:
     try:
       eligible_p = _check_eligibility(election, user)
     except AuthenticationExpired:

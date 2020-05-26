@@ -1,4 +1,4 @@
-O objetivo deste projeto era inicialmente atender a [necessidade N.47 do PDTI 2013 do IFNMG](http://dtic.ifsc.edu.br/files/pdti2013-revisao02.pdf).
+O objetivo deste projeto era inicialmente atender a [necessidade N.47 do PDTI 2013 do IFNMG](http://dtic.ifnmg.edu.br/files/pdti2013-revisao02.pdf).
 
 No entanto, logo percebeu-se que outras instituições, especialmente as de ensino, poderiam se beneficiar das melhorias realizadas no projeto original, a fim de atender ao público brasileiro.
 
@@ -8,13 +8,13 @@ Para saber um pouco mais, acesse:
 
 Tutoriais: 
 
-http://dtic.ifsc.edu.br/sistemas/sistema-de-votacao-on-line-helios/
+http://dtic.ifnmg.edu.br/sistemas/sistema-de-votacao-on-line-helios/
 
 Publicações:
 
-1) [O uso de um sistema de votação on-line para escolha do conselho universitário](http://dtic.ifsc.edu.br/files/chaves-sbseg14.pdf)
+1) [O uso de um sistema de votação on-line para escolha do conselho universitário](http://dtic.ifnmg.edu.br/files/chaves-sbseg14.pdf)
 
-2) [Adoção de modelo controle acesso baseado em atributos em sistema de votação online para ofertá-lo como um serviço de TIC federado](https://dtic.ifsc.edu.br/files/chaves-sbseg15.pdf)
+2) [Adoção de modelo controle acesso baseado em atributos em sistema de votação online para ofertá-lo como um serviço de TIC federado](https://dtic.ifnmg.edu.br/files/chaves-sbseg15.pdf)
 
 # Guia de instalação e configuração do Helios
 
@@ -89,7 +89,7 @@ FATAL:  Peer authentication failed for user "helios"
 
 Você pode baixar um zip com o fonte ou clonar o repositório. Supondo que o código vai ser baixado via git:
 
-*git clone https://github.com/ifsc/helios-server.git*
+*git clone https://github.com/ifnmg/helios-server.git*
 
 Não é obrigatório, mas é uma boa prática, criar um ambiente virtual para a disponibilização do Helios, tanto para desenvolvimento quanto para implantação, pois isso permite separar as dependências do projeto e não interferir em outros sistemas na mesma máquina. 
 
