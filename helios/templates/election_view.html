@@ -58,10 +58,17 @@
 	{% if user %}
 	  {% if voter %}
 		<p style="padding-top:1px;">
-		  {% trans  "You are registered to vote in this " %}{{election.pretty_type}}.
-		  {% if election.use_voter_aliases %}
-			{% trans "Your voter alias is " %}{{voter.alias}}.
-		  {% endif %} <!-- election.use_voter_aliases -->
+      {% if voter.vote_hash and election.voto_unico %}
+        {% trans "Você já votou nessa eleição. " %}
+        {% if election.use_voter_aliases %}
+			    {% trans "Your voter alias is " %}{{voter.alias}}.
+		    {% endif %} <!-- election.use_voter_aliases -->
+      {% else %}
+		    {% trans  "You are registered to vote in this " %}{{election.pretty_type}}.
+		    {% if election.use_voter_aliases %}
+			    {% trans "Your voter alias is " %}{{voter.alias}}.
+		    {% endif %} <!-- election.use_voter_aliases -->
+      {% endif %} <!-- end if voter.vote_hash -->
 		</p>
 	  {% else %} <!-- else if voter -->
 		{% if election.result %}
@@ -237,8 +244,11 @@ Once you do this, the tally will visible to you, the administrator, only.
 
 		{% if election.voting_has_started %}
 			{% if eligible_p %}
+      {% if voter.vote_hash and election.voto_unico %}
+      {% else %}
 				<a class="btn btn-lg btn-success" role="button" href="{{test_cookie_url}}">{% trans "Vote in this" %} {{election.pretty_type}} </a>
 			{% endif %}
+      {% endif %}
 			<br />
 			{% if election.private_p and voter %}
 				<br />

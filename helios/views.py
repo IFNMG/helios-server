@@ -229,7 +229,7 @@ def one_election_edit(request, election):
   user = get_user(request)
   
   RELEVANT_FIELDS = ['short_name', 'name', 'description', 'use_voter_aliases', 'election_type', 'help_email', 'randomize_answer_order', 'voting_starts_at', 'voting_ends_at']
-  RELEVANT_FIELDS += ['use_advanced_audit_features', 'private_p']
+  RELEVANT_FIELDS += ['use_advanced_audit_features', 'private_p', 'voto_unico']
 
   if settings.ALLOW_ELECTION_INFO_URL:
     RELEVANT_FIELDS += ['election_info_url']
@@ -1037,6 +1037,7 @@ def one_election_copy(request, election):
     name = "Copy of " + election.name,
     election_type = election.election_type,
     private_p = election.private_p,
+    voto_unico = election.voto_unico,
     description = election.description,
     questions = election.questions,
     eligibility = election.eligibility,
@@ -1583,7 +1584,3 @@ def ballot_list(request, election):
 
   # we explicitly cast this to a short cast vote
   return [v.last_cast_vote().ld_object.short.toDict(complete=True) for v in voters]
-
-
-
-

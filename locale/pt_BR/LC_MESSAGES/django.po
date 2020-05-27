@@ -1031,7 +1031,7 @@ msgstr "Você está apto a votar nesta "
 
 #: helios/templates/election_view.html:63
 msgid "Your voter alias is "
-msgstr "Usar pseudônimo de eleitor é "
+msgstr "Seu pseudônimo de eleitor é "
 
 #: helios/templates/election_view.html:71
 msgid "You are eligible to vote in this election."

@@ -58,6 +58,8 @@ class Election(HeliosModel):
   election_type = models.CharField(max_length=250, null=False, default='election', choices = ELECTION_TYPES)
   private_p = models.BooleanField(default=False, null=False)
 
+  voto_unico = models.BooleanField(default=False, null=False)
+
   description = models.TextField()
   public_key = LDObjectField(type_hint = 'legacy/EGPublicKey',
                              null=True)
@@ -159,6 +161,7 @@ class Election(HeliosModel):
     return {
       'help_email': self.help_email or settings.HELP_EMAIL_ADDRESS,
       'private_p': self.private_p,
+      'voto_unico': self.voto_unico,
       'use_advanced_audit_features': self.use_advanced_audit_features,
       'randomize_answer_order': self.randomize_answer_order
       }
