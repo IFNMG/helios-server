@@ -59,7 +59,9 @@
 	  {% if voter %}
 		<p style="padding-top:1px;">
       {% if voter.vote_hash and election.voto_unico %}
+        <span style="color:red;">
         {% trans "Você já votou nessa eleição. " %}
+        </span>
         {% if election.use_voter_aliases %}
 			    {% trans "Your voter alias is " %}{{voter.alias}}.
 		    {% endif %} <!-- election.use_voter_aliases -->
