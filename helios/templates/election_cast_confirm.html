@@ -41,9 +41,18 @@ window.onbeforeunload = function(evt) {
 <h2>{{election.name}}</h2>
 <h3>{% trans "Submit your Vote" %}</h3>
 
+{% if voter %}
+{% if voter.vote_hash and election.voto_unico %}
+<div class="alert alert-warning" role="alert">
+    <b><u>Não é possível depositar a cédula na urna porque você já votou nesta eleição.</u></b>
+</div>
+{% else %}
 <div class="alert alert-warning" role="alert">
     A sua cédula <b><u>ainda não foi depositada</u></b> na urna.
 </div>
+{% endif %}
+{% endif %}
+
 
 <div id="waiting_div">
    {% trans "Verifying and Casting your ballot" %}<br />
@@ -54,7 +63,12 @@ window.onbeforeunload = function(evt) {
 
 {% if voter %}
 
+{% if voter.vote_hash and election.voto_unico %}
+<a class="btn btn-primary" href="{% url "helios.views.one_election_view" election.uuid %}">{% trans "back to election" %}</a>
+<button class="btn btn-danger" type="button" onclick="document.location='/auth/logout';">{% trans "Voltar para eleição" %}</button><br />
+{% else %}
 {% include "_castconfirm_docast.html" %}
+{% endif %}
 
 {% else %}
 

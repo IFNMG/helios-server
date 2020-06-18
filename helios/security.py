@@ -147,7 +147,13 @@ def user_can_see_election(request, election):
     return True
 
   # then this user has to be a voter
-  return (get_voter(request, user, election) != None)
+  #return  (get_voter(request, user, election) != None)
+  
+  # Testa se está logado
+  if user:
+    return True
+  else:
+    return False
 
 def api_client_can_admin_election(api_client, election):
   return election.api_client == api_client and api_client != None
