@@ -149,7 +149,7 @@ def user_can_see_election(request, election):
   # then this user has to be a voter
   #return  (get_voter(request, user, election) != None)
   
-  # Testa se está logado
+  # Testa se esta logado
   if user:
     return True
   else:
