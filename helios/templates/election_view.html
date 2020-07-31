@@ -254,6 +254,10 @@ Once you do this, the tally will visible to you, the administrator, only.
         {% else %}
 				  <a class="btn btn-lg btn-success" role="button" href="{{test_cookie_url}}">{% trans "Vote in this" %} {{election.pretty_type}} </a>
 			  {% endif %}
+      {% else %}
+        {% if not election.private_p %}
+				  <a class="btn btn-lg btn-success" role="button" href="{{test_cookie_url}}">{% trans "Vote in this" %} {{election.pretty_type}} </a>
+			  {% endif %}
       {% endif %}
 			<br />
 			{% if election.private_p and voter %}
